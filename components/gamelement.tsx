@@ -29,7 +29,7 @@ export default function ElementGame() {
     // x.set(xx);
     // y.set(yy);
 
-    card.style.transform = `perspective(1000px) rotateX(${-y / 10}deg) rotateY(${x / 10}deg)`;
+    card.style.transform = `perspective(1000px) rotateX(${-yy / 10}deg) rotateY(${xx / 10}deg)`;
     setTimeout(() => {
       card.style.transform = "";
     }, 100);
