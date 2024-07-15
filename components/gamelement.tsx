@@ -26,8 +26,8 @@ export default function ElementGame() {
     const rect = card.getBoundingClientRect();
     const xx = e.clientX - rect.left - rect.width / 2;
     const yy = e.clientY - rect.top - rect.height / 2;
-    x.set(xx);
-    y.set(yy);
+    // x.set(xx);
+    // y.set(yy);
 
     card.style.transform = `perspective(1000px) rotateX(${-y / 10}deg) rotateY(${x / 10}deg)`;
     setTimeout(() => {
@@ -62,8 +62,8 @@ export default function ElementGame() {
   // console.log("rotx", rotX);
   // console.log("roty", rotY);
 
-  const rotateX = useMotionTemplate`${-y.get() / 10}deg`;
-  const rotateY = useMotionTemplate`${x.get() / 10}deg`;
+  // const rotateX = useMotionTemplate`${-y.get() / 10}deg`;
+  // const rotateY = useMotionTemplate`${x.get() / 10}deg`;
 
   const handleAnimationEnd = (id: number) => {
     setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
@@ -77,10 +77,10 @@ export default function ElementGame() {
         className="size-[300px] aspect-square relative p-4 [perspective:2000px] rounded-full bg-gradient-to-b from-[#575def] to-[#202731] "
         // onClick={handleCardClick}
         onClick={handleCardClick}
-        style={{
-          rotateX: rotateX,
-          rotateY: rotateY,
-        }}
+        // style={{
+        //   rotateX: rotateX,
+        //   rotateY: rotateY,
+        // }}
         // animate={controls}
       >
         {/* <AnimatePresence> */}
