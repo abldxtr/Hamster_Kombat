@@ -13,6 +13,8 @@ type ActiveMenueContextType = {
   setActiveN: Dispatch<SetStateAction<number>>;
   pointsToAdd: number;
   setpointsToAdd: Dispatch<SetStateAction<number>>;
+  points: number;
+  setPoints: Dispatch<SetStateAction<number>>;
 };
 
 const ActiveMenueContext = React.createContext<
@@ -22,10 +24,18 @@ const ActiveMenueContext = React.createContext<
 export function ActiveMenueProvider({ children }: { children: ReactNode }) {
   const [activeN, setActiveN] = useState<number>(1);
   const [pointsToAdd, setpointsToAdd] = useState<number>(15);
+  const [points, setPoints] = useState(22749365);
 
   return (
     <ActiveMenueContext.Provider
-      value={{ activeN, setActiveN, pointsToAdd, setpointsToAdd }}
+      value={{
+        activeN,
+        setActiveN,
+        pointsToAdd,
+        setpointsToAdd,
+        points,
+        setPoints,
+      }}
     >
       {children}
     </ActiveMenueContext.Provider>
