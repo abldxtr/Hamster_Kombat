@@ -35,7 +35,7 @@ export default function Header() {
           {/* <!-- 1 --> */}
           <div className="flex shrink-0 items-center">
             <img
-              src="https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/binance-logo-ICDYv7TY.png"
+              src="https://i.imgur.com/BpMo7OS.png"
               alt="logo"
               className="aspect-square size-8"
             />
@@ -49,7 +49,7 @@ export default function Header() {
             <div className="flex items-center gap-1">
               <div>
                 <img
-                  src="https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/dollar-coin-C8bHlbh6.png"
+                  src="https://i.imgur.com/vlkYkDq.png"
                   alt="coin"
                   className="aspect-square size-[18px]"
                 />

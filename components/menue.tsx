@@ -20,7 +20,7 @@ export default function Menue() {
           onClick={() => setActiveN(1)}
         >
           <img
-            src="https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/binance-logo-ICDYv7TY.png"
+            src="https://i.imgur.com/NIhBihR.png"
             alt="Exchange"
             className=" size-[28px] aspect-square mx-auto  "
           />
@@ -77,7 +77,7 @@ export default function Menue() {
           onClick={() => setActiveN(5)}
         >
           <img
-            src="https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/hamster-coin-BBw1dF5i.png"
+            src="https://i.imgur.com/X2PKmAt.png"
             alt="Airdrop"
             className="size-8 aspect-square mx-auto"
           />

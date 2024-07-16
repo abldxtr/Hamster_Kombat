@@ -198,15 +198,4 @@ const SvgIcon7 = () => (
   </svg>
 );
 
-export {
-  SvgIcon1,
-  SvgIcon2,
-  SvgIcon3,
-  SvgIcon4,
-  SvgIcon5,
-  SvgIcon6,
-  SvgIcon7,
-  //   SvgIcon8,
-  //   SvgIcon9,
-  //   SvgIcon10,
-};
+export { SvgIcon1, SvgIcon2, SvgIcon3, SvgIcon4, SvgIcon5, SvgIcon6, SvgIcon7 };

@@ -1,17 +1,17 @@
 export default function HeaderBody() {
   const items = [
     {
-      img: "https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/daily-reward-BQbFIOL9.png",
+      img: "https://i.imgur.com/bQAasrY.png",
       title: "Daily reward",
       value: "00:24",
     },
     {
-      img: "https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/daily-cipher-BsFh939_.png",
+      img: "https://i.imgur.com/UChls9w.png",
       title: "Daily cipher",
       value: "01:54",
     },
     {
-      img: "https://hamster-kombat-telegram-mini-app-clone.vercel.app/assets/daily-combo-BILPP4Db.png",
+      img: "https://i.imgur.com/XPYbGrP.png",
       title: "Daily combo",
       value: "00:22",
     },
