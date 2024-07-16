@@ -13,3 +13,11 @@
     transform: translateY(-150px);
   }
 }
+
+@layer utilities {
+  .numb {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    transform: translate3d(0, 0, 0);
+  }
+}
