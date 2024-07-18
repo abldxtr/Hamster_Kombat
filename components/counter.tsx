@@ -11,7 +11,7 @@ export default function Counter() {
 
   return (
     <div className="px-4 mt-4 flex justify-center z-10 isolate ">
-      <div className="px-4 py-2 flex items-center space-x-2 numb">
+      <div className="py-2 flex items-center space-x-2 numb">
         <img
           src="https://i.imgur.com/ykQVitW.png"
           alt="dollar coin"

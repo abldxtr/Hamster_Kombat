@@ -8,21 +8,13 @@ import {
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion";
-import {
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useState,
-  useTransition,
-} from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { flushSync } from "react-dom";
 import { v4 as uuidv4 } from "uuid";
 
 export default function ElementGame() {
   const { pointsToAdd, points, setPoints } = useActiveMenue();
   const [idF, setIdf] = useState<string[]>([]);
-  const [isPending, startTransition] = useTransition();
-  const [levelIndex, setLevelIndex] = useState(6);
   const profitPerHour = 126420;
 
   const [clicks, setClicks] = useState<{ id: string; x: number; y: number }[]>(
@@ -32,25 +24,6 @@ export default function ElementGame() {
   let x = useMotionValue(0);
   let y = useMotionValue(0);
   const controls = useAnimation();
-
-  const calculateTimeLeft = (targetHour: number) => {
-    const now = new Date();
-    const target = new Date(now);
-    target.setUTCHours(targetHour, 0, 0, 0);
-
-    if (now.getUTCHours() >= targetHour) {
-      target.setUTCDate(target.getUTCDate() + 1);
-    }
-
-    const diff = target.getTime() - now.getTime();
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-    const paddedHours = hours.toString().padStart(2, "0");
-    const paddedMinutes = minutes.toString().padStart(2, "0");
-
-    return `${paddedHours}:${paddedMinutes}`;
-  };
 
   const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
@@ -73,22 +46,22 @@ export default function ElementGame() {
     console.log("num_create", clicks.length);
   };
 
-  const handleAnimationEnd = (id: string) => {
-    console.log(
-      "end",
+  // const handleAnimationEnd = (id: string) => {
+  //   console.log(
+  //     "end",
 
-      clicks.length,
-    );
-    setIdf((perv) => [...idF, id]);
-    console.log("idf", idF);
-    console.log("clicks", clicks);
+  //     clicks.length,
+  //   );
+  //   setIdf((perv) => [...idF, id]);
+  //   console.log("idf", idF);
+  //   console.log("clicks", clicks);
 
-    let filter_res = clicks.filter((click) => !idF.includes(click.id));
+  //   let filter_res = clicks.filter((click) => !idF.includes(click.id));
 
-    setClicks(filter_res);
+  //   setClicks(filter_res);
 
-    setIdf((perv) => perv.filter((item) => item !== id));
-  };
+  //   setIdf((perv) => perv.filter((item) => item !== id));
+  // };
 
   useEffect(() => {
     const pointsPerSecond = Math.floor(profitPerHour / 3600);
@@ -99,11 +72,11 @@ export default function ElementGame() {
   }, [profitPerHour, setPoints]);
 
   return (
-    <div className="px-4 mt-4 flex justify-center select-none z-10 isolate">
+    <div className="px-4 flex justify-center select-none z-10 isolate">
       <motion.div
-        className="size-[300px] aspect-square relative p-4 [perspective:2000px] rounded-full bg-gradient-to-b from-[#575def] to-[#202731] "
+        className="size-[300px] shrink-0 aspect-square relative p-4 [perspective:2000px] rounded-full bg-gradient-to-b from-[#575def] to-[#202731] "
         // onClick={handleCardClick}
-        onClick={handleCardClick}
+        onPointerUp={handleCardClick}
       >
         {clicks.map((item, index) => {
           return (
@@ -157,14 +130,14 @@ export function Elem({
   const [idF, setIdf] = useState<string[]>([]);
 
   const handleAnimationEnd = (id: string) => {
-    console.log(
-      "end",
-      // clicks.map((item) => item.id === id),
-      clicks.length,
-    );
-    setIdf((perv) => [...idF, id]);
-    console.log("idf", idF);
-    console.log("clicks", clicks);
+    // console.log(
+    //   "end",
+    //   // clicks.map((item) => item.id === id),
+    //   clicks.length,
+    // );
+    // setIdf((perv) => [...idF, id]);
+    // console.log("idf", idF);
+    // console.log("clicks", clicks);
 
     setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
   };

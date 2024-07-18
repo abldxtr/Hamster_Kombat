@@ -19,7 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ActiveMenueProvider>
-        <body className={classNames(inter.className, "overflow-hidden")}>
+        <body
+          className={classNames(
+            inter.className,
+            "overflow-hidden h-full w-full",
+          )}
+        >
           {children}
         </body>
       </ActiveMenueProvider>
